@@ -2,6 +2,35 @@
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
 
+#define BUFFER_OFFSET(a) ((void*)(a))
+
+GLuint VAOID;
+GLuint VBOID;
+
+void init() {
+
+    static const GLfloat vertices[6][2] = {
+        {-0.90,-0.90},{ 0.85,-0.90},{-0.90, 0.85},
+        { 0.90,-0.85},{ 0.90, 0.90},{-0.85, 0.90}
+    };
+    glGenVertexArrays(1, &VAOID);
+    glBindVertexArray(VAOID);
+
+    glGenBuffers(1, &VBOID);
+    glBindBuffer(GL_ARRAY_BUFFER, VBOID);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    glEnableVertexAttribArray(0);
+}
+
+void display() {
+    static const float black[] = { 0.5f, 0.5f, 0.5f, 0.0f };
+    glClearBufferfv(GL_COLOR, 0, black);
+    glBindVertexArray(VAOID);
+    glDrawArrays(GL_PATCHES, 0, 6);
+}
+
 int main()
 {
     glfwInit();
@@ -9,12 +38,20 @@ int main()
     glfwMakeContextCurrent(window);
     gl3wInit();
 
-    char *GL_version = (char *)glGetString(GL_VERSION);
-    char *GL_vendor = (char *)glGetString(GL_VENDOR);
-    char *GL_renderer = (char *)glGetString(GL_RENDERER);
+    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
+    std::cout << "OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
 
-    std::cout << "OpenGL version: " << GL_version << std::endl;
-    std::cout << "OpenGL vendor: " << GL_vendor << std::endl;
-    std::cout << "OpenGL renderer: " << GL_renderer << std::endl;
+    init();
+
+    while(!glfwWindowShouldClose(window)) {
+        display();
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
+
     return 0;
 }
