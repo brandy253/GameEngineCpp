@@ -1,13 +1,24 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
+1475571669 source:f:\projects\github\gameenginecpp\gameenginecpp\main.cpp
+=======
 1475594271 source:d:\projects\github\gameenginecpp\main.cpp
+>>>>>>> origin/master
 	<iostream>
 	<GL/gl3w.h>
 	<GLFW/glfw3.h>
 
+<<<<<<< HEAD
+1474614636 f:\devsofts\!-libraries\glfw-3.2.1.bin.win32\include\gl\gl3w.h
+	<GL/glcorearb.h>
+
+1474614636 f:\devsofts\!-libraries\glfw-3.2.1.bin.win32\include\gl\glcorearb.h
+=======
 1475054976 d:\devsofts\!-libraries\gl3w-master\include\gl\gl3w.h
 	<GL/glcorearb.h>
 
 1475054976 d:\devsofts\!-libraries\gl3w-master\include\gl\glcorearb.h
+>>>>>>> origin/master
 	<windows.h>
 	<stddef.h>
 	<inttypes.h>
@@ -17,7 +28,11 @@
 	<stdint.h>
 	<inttypes.h>
 
+<<<<<<< HEAD
+1471521159 f:\devsofts\!-libraries\glfw-3.2.1.bin.win32\include\glfw\glfw3.h
+=======
 1471521159 d:\devsofts\!-libraries\glfw-3.2.1\include\glfw\glfw3.h
+>>>>>>> origin/master
 	<stddef.h>
 	<stdint.h>
 	<OpenGL/gl3.h>

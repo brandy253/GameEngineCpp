@@ -1,7 +1,28 @@
 #include <iostream>
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
+using namespace std;
 
+GLuint VAOId;
+
+void init() {
+    static const GLfloat vertices[6][2] = {
+        {-0.90,-0.90},{0.85,-0.90},{-0.90, 0.85},
+        { 0.90,-0.85},{0.90, 0.90},{-0.85, 0.90}
+    };
+
+    glGenVertexArrays(1, &VAOId);
+    glBindVertexArray(VAOId);
+}
+
+void display() {
+
+}
+
+int main() {
+
+<<<<<<< HEAD
+=======
 #define BUFFER_OFFSET(a) ((void*)(a))
 
 GLuint VAOID;
@@ -33,18 +54,31 @@ void display() {
 
 int main()
 {
+>>>>>>> origin/master
     glfwInit();
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Game Engine", NULL, NULL);
     glfwMakeContextCurrent(window);
     gl3wInit();
 
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
+<<<<<<< HEAD
+=======
     std::cout << "OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
+>>>>>>> origin/master
 
     init();
 
     while(!glfwWindowShouldClose(window)) {
+<<<<<<< HEAD
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
+=======
         display();
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -53,5 +87,6 @@ int main()
     glfwDestroyWindow(window);
     glfwTerminate();
 
+>>>>>>> origin/master
     return 0;
 }
