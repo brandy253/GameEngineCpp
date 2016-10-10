@@ -28,7 +28,7 @@ void display() {
     static const float black[] = { 0.5f, 0.5f, 0.5f, 0.0f };
     glClearBufferfv(GL_COLOR, 0, black);
     glBindVertexArray(VAOID);
-    glDrawArrays(GL_PATCHES, 0, 6);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
 int main()
