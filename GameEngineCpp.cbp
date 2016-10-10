@@ -31,6 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+<<<<<<< HEAD
 			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/include" />
 			<Add directory="../../../../DevSofts/!-Libraries/gl3w-master/include" />
 		</Compiler>
@@ -39,8 +40,20 @@
 			<Add library="../../../CodeBlocks/GL3W_Build/bin/Debug/libGL3W_Build.a" />
 			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/lib-mingw" />
 			<Add directory="../../../CodeBlocks/GL3W_Build/bin/Debug" />
+=======
+			<Add directory="D:/DevSofts/!-Libraries/glfw-3.2.1/include" />
+			<Add directory="D:/DevSofts/!-Libraries/gl3w-master/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lgl3w -lglfw3 -lopengl32 -lglu32 -lgdi32" />
+			<Add library="D:/DevSofts/!-Libraries/gl3w-master/lib/libGL3W.a" />
+			<Add directory="D:/DevSofts/!-Libraries/gl3w-master/lib" />
+			<Add directory="D:/DevSofts/!-Libraries/glfw-3.2.1/lib-mingw" />
+>>>>>>> origin/master
 		</Linker>
 		<Unit filename="main.cpp" />
+		<Unit filename="triangles.frag" />
+		<Unit filename="triangles.vert" />
 		<Extensions>
 			<code_completion />
 			<envvars />
