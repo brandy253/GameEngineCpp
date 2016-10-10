@@ -31,7 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/include" />
+			<Add directory="../../../../DevSofts/!-Libraries/gl3w-master/include" />
 		</Compiler>
+		<Linker>
+			<Add option="-lglfw3 -lgl3w_Build -lopengl32  -lgdi32 -lglu32" />
+			<Add library="../../../CodeBlocks/GL3W_Build/bin/Debug/libGL3W_Build.a" />
+			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/lib-mingw" />
+			<Add directory="../../../CodeBlocks/GL3W_Build/bin/Debug" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

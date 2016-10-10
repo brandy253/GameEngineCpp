@@ -1,20 +1,42 @@
 #include <iostream>
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
+using namespace std;
 
-int main()
-{
+GLuint VAOId;
+
+void init() {
+    static const GLfloat vertices[6][2] = {
+        {-0.90,-0.90},{0.85,-0.90},{-0.90, 0.85},
+        { 0.90,-0.85},{0.90, 0.90},{-0.85, 0.90}
+    };
+
+    glGenVertexArrays(1, &VAOId);
+    glBindVertexArray(VAOId);
+}
+
+void display() {
+
+}
+
+int main() {
+
     glfwInit();
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Game Engine", NULL, NULL);
     glfwMakeContextCurrent(window);
     gl3wInit();
 
-    char *GL_version = (char *)glGetString(GL_VERSION);
-    char *GL_vendor = (char *)glGetString(GL_VENDOR);
-    char *GL_renderer = (char *)glGetString(GL_RENDERER);
+    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
 
-    std::cout << "OpenGL version: " << GL_version << std::endl;
-    std::cout << "OpenGL vendor: " << GL_vendor << std::endl;
-    std::cout << "OpenGL renderer: " << GL_renderer << std::endl;
+    init();
+
+    while(!glfwWindowShouldClose(window)) {
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
     return 0;
 }
