@@ -26,15 +26,28 @@ void init() {
         {1.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 1.0f}, {1.0f, 0.0f, 1.0f}
     };
 
-    glGenVertexArrays(1, &VAOID);
-    glBindVertexArray(VAOID);
+    //  VBOs
+    glGenBuffers(2, VBOID);
 
-    glGenBuffers(1, &VBOID);
-    glBindBuffer(GL_ARRAY_BUFFER, VBOID);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, VBOID[0]);
+    glBufferData(GL_ARRAY_BUFFER, 9 * 6 * sizeof(float), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBOID[1]);
+    glBufferData(GL_ARRAY_BUFFER, 9 * 6 * sizeof(float), colors, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
     glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+
+    //  VAOs
+    glGenVertexArrays(1, &VAOID);
+    glBindVertexArray(VAOID);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBOID[0]);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBOID[1]);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
 
     glDisable(GL_PROGRAM_POINT_SIZE);
     glPointSize(10.0);
