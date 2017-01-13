@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -33,6 +35,7 @@
 			<Add option="-fexceptions" />
 			<Add directory="../../../../DevSofts/!-Libraries/gl3w-master/include" />
 			<Add directory="../../../DevSofts/!-Libraries/glfw-3.2.1/include" />
+			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/include" />
 		</Compiler>
 		<Linker>
 			<Add option="-lglfw3 -lgl3w_Build -lopengl32  -lgdi32 -lglu32" />
@@ -42,7 +45,13 @@
 			<Add directory="D:/DevSofts/!-Libraries/glfw-3.2.1/include" />
 			<Add directory="D:/DevSofts/!-Libraries/gl3w-master/include" />
 		</Linker>
+		<Unit filename="include/Loader.h" />
+		<Unit filename="include/Shader.h" />
+		<Unit filename="include/VersionDisplay.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Loader.cpp" />
+		<Unit filename="src/Shader.cpp" />
+		<Unit filename="src/VersionDisplay.cpp" />
 		<Unit filename="triangles.frag" />
 		<Unit filename="triangles.vert" />
 		<Extensions>

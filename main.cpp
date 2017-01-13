@@ -1,19 +1,31 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#include <stdlib.h>
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
+
+#include "VersionDisplay.h"
+#include "Loader.h"
+#include "Shader.h"
+
 using namespace std;
 
 #define BUFFER_OFFSET(a) ((void*)(a))
 
 GLuint VAOID;
-GLuint VBOID;
+GLuint VBOID[2];
 
 void init() {
 
-    static const GLfloat vertices[6][2] = {
-        {-0.90,-0.90},{ 0.85,-0.90},{-0.90, 0.85},
-        { 0.90,-0.85},{ 0.90, 0.90},{-0.85, 0.90}
+    static const GLfloat vertices[6][3] = {
+        {-0.90,-0.90, 0.00},{ 0.85,-0.90, 0.00},{-0.90, 0.85, 0.00},
+        { 0.90,-0.85, 0.00},{ 0.90, 0.90, 0.00},{-0.85, 0.90, 0.00}
     };
+
+    static const GLfloat colors[6][3] = {
+        {1.0f, 0.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, {0.0f, 0.0f, 1.0f},
+        {1.0f, 1.0f, 0.0f}, {0.0f, 1.0f, 1.0f}, {1.0f, 0.0f, 1.0f}
+    };
+
     glGenVertexArrays(1, &VAOID);
     glBindVertexArray(VAOID);
 
@@ -21,8 +33,11 @@ void init() {
     glBindBuffer(GL_ARRAY_BUFFER, VBOID);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
     glEnableVertexAttribArray(0);
+
+    glDisable(GL_PROGRAM_POINT_SIZE);
+    glPointSize(10.0);
 }
 
 void display() {
@@ -34,18 +49,35 @@ void display() {
 
 int main()
 {
+    //  Init OpenGL
     glfwInit();
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Game Engine", NULL, NULL);
     glfwMakeContextCurrent(window);
     gl3wInit();
 
-    std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "OpenGL Vendor: " << glGetString(GL_VENDOR) << std::endl;
-    std::cout << "OpenGL Renderer: " << glGetString(GL_RENDERER) << std::endl;
+    //  Display some information
+    VersionDisplay *vd = new VersionDisplay(); vd->display();
+
+    //  Init some data
     init();
 
-    while(!glfwWindowShouldClose(window)) {
+    //  Init, load and build shaders
+    Loader* loader = new Loader();
+    GLchar* src = loader->LoadShaderSource("triangles.vert");
 
+    Shader *shader = new Shader();
+    shader->createVertexShader();
+    shader->compileVertexShader((char*)src);
+
+    src = loader->LoadShaderSource("triangles.frag");
+    shader->createFragmentShader();
+    shader->compileFragmentShader(src);
+
+    shader->build();
+
+    //  Main loop
+    while(!glfwWindowShouldClose(window)) {
+        display();
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
