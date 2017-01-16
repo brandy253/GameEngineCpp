@@ -88,6 +88,9 @@ void Shader::build() {
         cout << "Error while creating program object" << endl;
         return;
     }
+    glBindAttribLocation(programHandle, 0, "VertexPosition");
+    glBindAttribLocation(programHandle, 1, "VertexColor");
+
     glAttachShader(programHandle, vertexShader);
     glAttachShader(programHandle, fragmentShader);
 
