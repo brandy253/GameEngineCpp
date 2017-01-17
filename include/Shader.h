@@ -19,11 +19,13 @@ class Shader
 
         void build();
 
+        GLuint getProgramHandle();
     protected:
 
     private:
         int vertexShader;
         int fragmentShader;
+        GLuint programHandle;
 };
 
 #endif // SHADER_H

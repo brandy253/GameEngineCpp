@@ -83,7 +83,7 @@ void Shader::compileFragmentShader(char* src) {
 
 void Shader::build() {
     cout << "Linking shader program...";
-    GLuint programHandle = glCreateProgram();
+    programHandle = glCreateProgram();
     if(programHandle == 0) {
         cout << "Error while creating program object" << endl;
         return;
@@ -113,4 +113,25 @@ void Shader::build() {
     }
     glUseProgram(programHandle);
     cout << "Done" << endl;
+
+    GLint maxLength, nAttribs;
+    glGetProgramiv(programHandle, GL_ACTIVE_ATTRIBUTES, &nAttribs);
+    glGetProgramiv(programHandle, GL_ACTIVE_ATTRIBUTE_MAX_LENGTH, &maxLength);
+    GLchar *name = (GLchar*) malloc(maxLength);
+
+    cout << endl << "List of active attributes:" << endl;
+    GLint written, sizei, location;
+    GLenum type;
+    cout << " Index | Name " << endl;
+    cout << "---------------------------------------------" << endl;
+    for(int i = 0 ; i < nAttribs ; i++) {
+        glGetActiveAttrib(programHandle, i, maxLength, &written, &sizei, &type, name);
+        location = glGetAttribLocation(programHandle, name);
+        printf(" %-5d | %s\n", location, name);
+    }
+    free(name);
+}
+
+GLuint Shader::getProgramHandle() {
+    return this->programHandle;
 }

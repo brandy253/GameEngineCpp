@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 2 |O0w´
 
-1484555603 source:f:\projects\github\gameenginecpp\gameenginecpp\main.cpp
+1484644356 source:f:\projects\github\gameenginecpp\gameenginecpp\main.cpp
 	<bits/stdc++.h>
 	<stdlib.h>
 	<GL/gl3w.h>
@@ -9,6 +9,8 @@
 	"VersionDisplay.h"
 	"Loader.h"
 	"Shader.h"
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
 
 1475594271 source:d:\projects\github\gameenginecpp\main.cpp
 
@@ -91,12 +93,475 @@
 1484291575 source:f:\projects\github\gameenginecpp\gameenginecpp\src\loader.cpp
 	"Loader.h"
 
-1484555653 source:f:\projects\github\gameenginecpp\gameenginecpp\src\shader.cpp
+1484635990 source:f:\projects\github\gameenginecpp\gameenginecpp\src\shader.cpp
 	"Shader.h"
 
-1484294281 f:\projects\github\gameenginecpp\gameenginecpp\include\shader.h
+1484635973 f:\projects\github\gameenginecpp\gameenginecpp\include\shader.h
 	<stdlib.h>
 	<GL/gl3w.h>
 	<GLFW/glfw3.h>
 	<bits/stdc++.h>
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\_fixes.hpp
+	<cmath>
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\fwd.hpp
+	"detail/type_int.hpp"
+	"detail/type_float.hpp"
+	"detail/type_vec.hpp"
+	"detail/type_mat.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_int.hpp
+	"setup.hpp"
+	<type_traits>
+	<cstdint>
+
+1478948828 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\setup.hpp
+	<cassert>
+	<cstddef>
+	"../simd/platform.h"
+
+1478947838 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\platform.h
+	<cuda.h>
+	<intrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<nmmintrin.h>
+	<smmintrin.h>
+	<tmmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_float.hpp
+	"setup.hpp"
+
+1474219786 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec.hpp
+	"precision.hpp"
+	"type_int.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\precision.hpp
+	"setup.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat.hpp
+	"precision.hpp"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\vec2.hpp
+	"detail/type_vec2.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec2.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\_swizzle.hpp
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\_swizzle_func.hpp
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec2.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\vec3.hpp
+	"detail/type_vec3.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec3.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec3.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\vec4.hpp
+	"detail/type_vec4.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec4.hpp
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec4.inl
+	"type_vec4_simd.inl"
+
+1476301215 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec4_simd.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat2x2.hpp
+	"detail/type_mat2x2.hpp"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x2.inl
+	"func_matrix.hpp"
+
+1476301215 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_matrix.hpp
+	"../detail/precision.hpp"
+	"../detail/setup.hpp"
+	"../detail/type_mat.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"func_matrix.inl"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat2x3.hpp
+	"detail/type_mat2x3.hpp"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x3.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x3.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat2x4.hpp
+	"detail/type_mat2x4.hpp"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x4.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat2x4.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat3x2.hpp
+	"detail/type_mat3x2.hpp"
+
+1477988131 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x2.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat3x3.hpp
+	"detail/type_mat3x3.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x3.inl
+	"func_matrix.hpp"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat3x4.hpp
+	"detail/type_mat3x4.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x4.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat3x4.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat4x2.hpp
+	"detail/type_mat4x2.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x2.hpp
+	"../fwd.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x2.inl
+
+1476612658 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat4x3.hpp
+	"detail/type_mat4x3.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x3.hpp
+	"../fwd.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x3.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\mat4x4.hpp
+	"detail/type_mat4x4.hpp"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x4.hpp
+	"../fwd.hpp"
+	"type_vec4.hpp"
+	"type_mat.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1478039704 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x4.inl
+	"func_matrix.hpp"
+	"type_mat4x4_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_mat4x4_simd.inl
+
+1478039704 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+	"func_matrix_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\geometric.hpp
+	"detail/func_geometric.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_geometric.hpp
+	"type_vec3.hpp"
+	"func_geometric.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_geometric.inl
+	"func_exponential.hpp"
+	"func_common.hpp"
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"type_float.hpp"
+	"func_geometric_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_exponential.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<cmath>
+	"func_exponential.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec1.hpp
+	"../fwd.hpp"
+	"type_vec.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1477988132 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_vec1.inl
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_exponential.inl
+	"func_vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+	"func_exponential_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_vector_relational.hpp
+	"precision.hpp"
+	"setup.hpp"
+	"func_vector_relational.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_vector_relational.inl
+	<limits>
+	"func_vector_relational_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_vector_relational_simd.inl
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\_vectorize.hpp
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_exponential_simd.inl
+	"../simd/exponential.h"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\exponential.h
+	"platform.h"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_common.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"type_int.hpp"
+	"_fixes.hpp"
+	"func_common.inl"
+
+1478039704 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_common.inl
+	"func_vector_relational.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+	"func_common_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_common_simd.inl
+	"../simd/common.h"
+	<immintrin.h>
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\common.h
+	"platform.h"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_geometric_simd.inl
+	"../simd/geometric.h"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\geometric.h
+	"common.h"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_matrix_simd.inl
+	"type_mat4x4.hpp"
+	"func_geometric.hpp"
+	"../simd/matrix.h"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\matrix.h
+	"geometric.h"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\trigonometric.hpp
+	"detail/func_trigonometric.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_trigonometric.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_trigonometric.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+	"func_trigonometric_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_trigonometric_simd.inl
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\exponential.hpp
+	"detail/func_exponential.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\common.hpp
+	"detail/func_common.hpp"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\packing.hpp
+	"detail/func_packing.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1478108259 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+	"func_packing_simd.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\type_half.inl
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_packing_simd.inl
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\matrix.hpp
+	"detail/func_matrix.hpp"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\integer.hpp
+	"detail/func_integer.hpp"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_integer.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_common.hpp"
+	"func_vector_relational.hpp"
+	"func_integer.inl"
+
+1478947838 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+	"func_integer_simd.inl"
+
+1478723989 f:\devsofts\!-libraries\glm-0.9.8.3\glm\detail\func_integer_simd.inl
+	"../simd/integer.h"
+
+1473885902 f:\devsofts\!-libraries\glm-0.9.8.3\glm\simd\integer.h
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\gtc\matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../gtc/constants.hpp"
+	"matrix_transform.inl"
+
+1478947838 f:\devsofts\!-libraries\glm-0.9.8.3\glm\gtc\constants.hpp
+	"../detail/setup.hpp"
+	"constants.inl"
+
+1473885901 f:\devsofts\!-libraries\glm-0.9.8.3\glm\gtc\constants.inl
+	<limits>
+
+1478722562 f:\devsofts\!-libraries\glm-0.9.8.3\glm\gtc\matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
 

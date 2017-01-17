@@ -36,6 +36,7 @@
 			<Add directory="../../../../DevSofts/!-Libraries/gl3w-master/include" />
 			<Add directory="../../../DevSofts/!-Libraries/glfw-3.2.1/include" />
 			<Add directory="../../../../DevSofts/!-Libraries/glfw-3.2.1.bin.WIN32/include" />
+			<Add directory="../../../../DevSofts/!-Libraries/glm-0.9.8.3" />
 		</Compiler>
 		<Linker>
 			<Add option="-lglfw3 -lgl3w_Build -lopengl32  -lgdi32 -lglu32" />
